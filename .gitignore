@@ -1,3 +1,6 @@
 target
 tags
 *.pyc
+*.class
+obj
+.vscode
