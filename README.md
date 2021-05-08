@@ -54,8 +54,22 @@ clang-11 -O3 -lc main.c -o main
 
 ## Result on M1 Mac mini
 
+### 2024 June
+
+* Rust Wasm used wasmtime 21.0.1
+
+| Fib | Py 3.12.3 | Go 1.22.3 | Rust 1.78.0 | Rust Wasm | .NET 8.0.301 | Open JDK 21.0.3 | C (clang 18.1.6) |
+| --- | --------- | --------- | ----------- | --------- | ------------ | --------------- | ---------------- |
+| 40  | 10.8s     | 0.3s      | 0.3s        | 0.4s      | 0.3s         | 0.3s            | 0.3s            |
+| 41  | 17.4s     | 0.5s      | 0.5s        | 0.6s      | 0.5s         | 0.5s            | 0.5s            |
+| 42  | 28.1s     | 0.9s      | 0.8s        | 1.0s      | 0.7s         | 0.8s            | 0.8s            |
+| 43  | 45.4s     | 1.4s      | 1.4s        | 1.6s      | 1.1s         | 1.3s            | 1.3s            |
+
+### 2021 May
+
 * Times are all in seconds
 * clang 11.1.0 and Apple clang 12 were the same as clang 12.0.0
+* Rust Wasm used wasmtime 0.26
 
 | Fib | Py 3.9.4 | Go 1.16.3 | Rust 1.51.0 | Rust Wasm | .NET6 preview3 | Open JDK 11.0.10 | C (clang 12.0.0) |
 | --- | -------- | --------- | ----------- | --------- | -------------- | ---------------- | ---------------- |
@@ -65,6 +79,8 @@ clang-11 -O3 -lc main.c -o main
 | 43  | 87.7s    | 2.2s      | 1.3s        | 1.8s      | 1.9s           | 1.2s             | 1.3s             |
 
 ## Result on a Ubuntu 20.04 VM
+
+### 2021 May
 
 * VM on i7-10710U VM
 

@@ -2,10 +2,10 @@
 name = "rust_wasm_runner"
 version = "0.1.0"
 authors = ["So Koide <sokoide@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 stopwatch = "0.0.7"
-wasmtime = "0.26.0"
+wasmtime = "21.0.1"
