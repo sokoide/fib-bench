@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <time.h>
 
 uint64_t fib(uint64_t i) {
@@ -18,7 +18,7 @@ int main() {
 
         double wall = 1000.0 * tw2.tv_sec + 1e-6 * tw2.tv_nsec -
                       (1000.0 * tw1.tv_sec + 1e-6 * tw1.tv_nsec);
-        printf("%lf, fib(%lu)=%lu\n", wall, i, result);
+        printf("%lf, fib(%llu)=%llu\n", wall, i, result);
     }
     return 0;
 }
