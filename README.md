@@ -9,47 +9,52 @@
 * rust
 
 ```bash
-cargo build --release
+cd rust
+make run
 ```
 
 * rust_wasm
 
 ```bash
 rustup target add wasm32-unknown-unknown
-cargo build --release --target wasm32-unknown-unknown
+cd rust_wasm
+make
 ```
 
 * rust_wasm_runner
 
 ```bash
-cargo build --release
+cd rust_wasm_runner
+make run
 ```
 
 * go
 
 ```bash
-go build  -ldflags "-s -w"
+cd go
+make run
 ```
 
 * .NET
 
 ```bash
-# change net5.0 to net6.0 in fib.csproj to compile with .NET6 SDK
-dotnet run -c release
+cd net
+make run # .net8
+make run6 # .net6
 ```
 
 * Java
 
 ```bash
-javac Hoge.java
-java Hoge
+cd java
+make run
 ```
 
 * C
 
 ```
-clang-11 -O3 -lc main.c -o main
-./main
+cd c
+make run
 ```
 
 ## Result on M1 Mac mini
@@ -63,9 +68,9 @@ clang-11 -O3 -lc main.c -o main
 | Fib | Py 3.12.3 | Go 1.22.3 | Rust 1.78.0 | Rust Wasm | .NET 8.0.6 | .NET 6.0.31 | Open JDK 21.0.3 | C (clang 18.1.6) |
 | --- | --------- | --------- | ----------- | --------- | ---------- | ----------- | --------------- | ---------------- |
 | 40  | 10.8s     | 0.3s      | 0.3s        | 0.4s      | 0.3s       | 0.5s        | 0.3s            | 0.3s             |
-| 41  | 17.4s     | 0.5s      | 0.5s        | 0.6s      | 0.5s       | 0.8s        | 0.5s            | 0.5s             |
-| 42  | 28.1s     | 0.9s      | 0.8s        | 1.0s      | 0.7s       | 1.3s        | 0.8s            | 0.8s             |
-| 43  | 45.4s     | 1.4s      | 1.4s        | 1.6s      | 1.3s       | 2.0s        | 1.3s            | 1.3s             |
+| 41  | 17.4s     | 0.6s      | 0.5s        | 0.6s      | 0.5s       | 0.8s        | 0.5s            | 0.5s             |
+| 42  | 28.1s     | 1.0s      | 0.8s        | 1.0s      | 0.7s       | 1.3s        | 0.8s            | 0.8s             |
+| 43  | 45.4s     | 1.5s      | 1.4s        | 1.6s      | 1.3s       | 2.0s        | 1.3s            | 1.3s             |
 
 ### 2021 May
 
