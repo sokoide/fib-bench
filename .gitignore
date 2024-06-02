@@ -4,3 +4,8 @@ tags
 *.class
 obj
 .vscode
+.DS_Store
+
+# binaries
+c/c-fib
+go/go-fib
