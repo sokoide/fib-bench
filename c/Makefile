@@ -8,7 +8,9 @@ OBJS = $(SRCS:.c=.o)
 
 OUTOBJS = $(addprefix $(OUTDIR)/,$(OBJS))
 
-CXX = clang
+# set CXX if not defines
+# you can override it by `CXX=gcc make run`
+CXX ?= clang
 CXXFLAGS = -std=c11 -Wall -O2 -I.
 
 .PHONY: default build run clean
